@@ -420,7 +420,7 @@ export default function App() {
                 <Activity className="h-4.5 w-4.5" />
                 <span>Performance &amp; Charts</span>
               </div>
-              <ChevronRight className="h-4 w-4" />
+              <ChevronRight className="h-4.5 w-4.5" />
             </button>
 
             <button
@@ -700,7 +700,7 @@ export default function App() {
                           className="absolute group pointer-events-auto"
                           style={{ left: xOffset, bottom: yOffset, transform: 'translate(-50%, 50%)' }}
                         >
-                          <div className="w-3 h-3 rounded-full bg-indigo-505 border-2 border-white dark:border-slate-900 group-hover:scale-150 transition-transform cursor-pointer shadow-lg shadow-indigo-505/50"></div>
+                          <div className="w-3 h-3 rounded-full bg-indigo-505 border-2 border-white dark:border-slate-900 group-hover:scale-150 transition-transform cursor-pointer shadow-lg shadow-indigo-500/50"></div>
                           <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white text-[10px] font-mono py-1 px-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-10 shadow-xl border border-slate-700">
                             {d} items
                           </div>
