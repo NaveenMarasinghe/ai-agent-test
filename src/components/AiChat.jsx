@@ -17,7 +17,6 @@ export default function AiChat({
 
   return (
     <div className="space-y-6 flex-1 flex flex-col justify-between overflow-hidden h-[calc(100vh-120px)]">
-      {/* Chat top context bar */}
       <div className="border-b border-slate-200 dark:border-slate-800 pb-4 shrink-0">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -35,7 +34,6 @@ export default function AiChat({
         </div>
       </div>
 
-      {/* Chat Messages Feed Container */}
       <div className="flex-1 overflow-y-auto space-y-4 pr-1 py-2 min-h-0">
         {chatMessages.map((msg, i) => (
           <div 
@@ -44,7 +42,6 @@ export default function AiChat({
               msg.sender === 'user' ? 'ml-auto flex-row-reverse' : ''
             }`}
           >
-            {/* Avatar Icons */}
             <div className={`h-8 w-8 rounded-full shrink-0 flex items-center justify-center font-bold text-xs text-white shadow-sm ${
               msg.sender === 'user' 
                 ? 'bg-gradient-to-tr from-indigo-500 to-indigo-600' 
@@ -53,7 +50,6 @@ export default function AiChat({
               {msg.sender === 'user' ? <User className="h-4.5 w-4.5" /> : <Sparkles className="h-4.5 w-4.5 text-indigo-400" />}
             </div>
 
-            {/* Text Container bubble */}
             <div className={`p-4 rounded-2xl text-xs leading-relaxed border shadow-sm ${
               msg.sender === 'user' 
                 ? 'bg-indigo-600 text-white border-indigo-500' 
@@ -69,7 +65,6 @@ export default function AiChat({
           </div>
         ))}
 
-        {/* AI typing simulation tracker indicator */}
         {isAiTyping && (
           <div className="flex gap-3 max-w-md">
             <div className="h-8 w-8 rounded-full bg-slate-900 flex items-center justify-center">
@@ -85,7 +80,6 @@ export default function AiChat({
         <div ref={chatEndRef}></div>
       </div>
 
-      {/* Quick Helper presets */}
       <div className="space-y-2 shrink-0">
         <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Quick actions</p>
         <div className="flex flex-wrap gap-2">
@@ -110,7 +104,6 @@ export default function AiChat({
         </div>
       </div>
 
-      {/* Bottom input area form */}
       <form onSubmit={handleSendChat} className="flex items-center gap-3 bg-white dark:bg-slate-900 p-2 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg shrink-0">
         <input 
           type="text"
