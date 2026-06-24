@@ -8,7 +8,6 @@
   }
 }
 
-/* Custom dynamic progress glow styling */
 .progress-glow-emerald {
   filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.5));
 }
