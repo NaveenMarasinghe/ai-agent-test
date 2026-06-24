@@ -115,7 +115,7 @@ export default function TelemetryMetrics({
             {animatedChartData.map((d, i) => {
               const maxVal = Math.max(...animatedChartData);
               const xOffset = `${(i / (animatedChartData.length - 1)) * 100}%`;
-              const yOffset = `${(d / maxVal) * 100}%`;
+              const yOffset = `${(d / maxVal) * 105}%`;
 
               return (
                 <div 
