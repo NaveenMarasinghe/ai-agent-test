@@ -339,7 +339,7 @@ export default function App() {
               <div className="p-3 rounded-lg bg-rose-500/10 border border-rose-500/20 flex gap-3">
                 <AlertCircle className="h-5 w-5 text-rose-500 shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-sm font-semibold text-rose-900 dark:text-rose-300">Node Sync Latency Exceeded</p>
+                  <p className="text-sm font-semibold text-rose-900 dark:text-rose-303">Node Sync Latency Exceeded</p>
                   <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Backup cluster Node-14 reported database lag deviation over +240ms.</p>
                   <span className="text-[10px] text-slate-400 mt-1 block">2 minutes ago</span>
                 </div>
@@ -347,15 +347,15 @@ export default function App() {
               <div className="p-3 rounded-lg bg-amber-500/10 border border-amber-500/20 flex gap-3">
                 <AlertCircle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-sm font-semibold text-amber-900 dark:text-amber-300">Memory Footprint Warning</p>
+                  <p className="text-sm font-semibold text-amber-900 dark:text-amber-303">Memory Footprint Warning</p>
                   <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Host RAM usage breached pre-set threshold at 81%. Local cluster scaling required.</p>
                   <span className="text-[10px] text-slate-400 mt-1 block">15 minutes ago</span>
                 </div>
               </div>
               <div className="p-3 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex gap-3">
-                <CheckCircle2 className="h-5 w-5 text-indigo-500 shrink-0 mt-0.5" />
+                <CheckCircle2 className="h-5 w-5 text-indigo-505 shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-sm font-semibold text-indigo-900 dark:text-indigo-300">Auto-Scaling Resolved</p>
+                  <p className="text-sm font-semibold text-indigo-900 dark:text-indigo-303">Auto-Scaling Resolved</p>
                   <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Successfully routed redundant traffic to US-East server group.</p>
                   <span className="text-[10px] text-slate-400 mt-1 block">1 hour ago</span>
                 </div>
@@ -408,7 +408,7 @@ export default function App() {
               className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-xs font-semibold transition-all duration-150 ${
                 activeTab === 'dashboard'
                   ? 'bg-gradient-to-r from-indigo-600 to-indigo-700 text-white shadow-lg shadow-indigo-600/20'
-                  : 'text-slate-400 hover:text-slate-202 hover:bg-slate-800/60'
+                  : 'text-slate-400 hover:text-slate-203 hover:bg-slate-800/60'
               }`}
             >
               <div className="flex items-center gap-3">
@@ -423,7 +423,7 @@ export default function App() {
               className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-xs font-semibold transition-all duration-150 ${
                 activeTab === 'tasks'
                   ? 'bg-gradient-to-r from-indigo-600 to-indigo-700 text-white shadow-lg shadow-indigo-600/20'
-                  : 'text-slate-400 hover:text-slate-202 hover:bg-slate-800/60'
+                  : 'text-slate-400 hover:text-slate-203 hover:bg-slate-800/60'
               }`}
             >
               <div className="flex items-center gap-3">
@@ -438,7 +438,7 @@ export default function App() {
               className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-xs font-semibold transition-all duration-150 ${
                 activeTab === 'ai-chat'
                   ? 'bg-gradient-to-r from-indigo-600 to-indigo-700 text-white shadow-lg shadow-indigo-600/20'
-                  : 'text-slate-400 hover:text-slate-202 hover:bg-slate-800/60'
+                  : 'text-slate-400 hover:text-slate-203 hover:bg-slate-800/60'
               }`}
             >
               <div className="flex items-center gap-3">
@@ -453,7 +453,7 @@ export default function App() {
               className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-xs font-semibold transition-all duration-150 ${
                 activeTab === 'metrics'
                   ? 'bg-gradient-to-r from-indigo-600 to-indigo-700 text-white shadow-lg shadow-indigo-600/20'
-                  : 'text-slate-400 hover:text-slate-202 hover:bg-slate-800/60'
+                  : 'text-slate-400 hover:text-slate-203 hover:bg-slate-800/60'
               }`}
             >
               <div className="flex items-center gap-3">
@@ -468,7 +468,7 @@ export default function App() {
               className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-xs font-semibold transition-all duration-150 ${
                 activeTab === 'terminal'
                   ? 'bg-gradient-to-r from-indigo-600 to-indigo-700 text-white shadow-lg shadow-indigo-600/20'
-                  : 'text-slate-400 hover:text-slate-202 hover:bg-slate-800/60'
+                  : 'text-slate-400 hover:text-slate-203 hover:bg-slate-800/60'
               }`}
             >
               <div className="flex items-center gap-3">
@@ -528,7 +528,7 @@ export default function App() {
               placeholder="Search workspace (tasks, resources, system logs)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full text-xs pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-950 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500"
+              className="w-full text-xs pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-955 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500"
             />
           </div>
 
@@ -578,7 +578,7 @@ export default function App() {
               
               <div className="relative flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
-                  <div className="flex items-center gap-2 mb-2 bg-indigo-500/20 w-fit px-2.5 py-1 rounded-full text-[11px] font-bold text-indigo-300 tracking-wider uppercase">
+                  <div className="flex items-center gap-2 mb-2 bg-indigo-500/20 w-fit px-2.5 py-1 rounded-full text-[11px] font-bold text-indigo-303 tracking-wider uppercase">
                     <Sparkles className="h-3.5 w-3.5" /> Live Operational Node Grid
                   </div>
                   <h2 className="text-2xl font-black tracking-tight mb-2">Advanced Cluster Architecture Sandbox</h2>
@@ -627,7 +627,7 @@ export default function App() {
                     style={{ width: `${cpuLoad}%` }}
                   ></div>
                 </div>
-                <div className="mt-4 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 font-mono">
+                <div className="mt-4 flex items-center justify-between text-[11px] text-slate-505 dark:text-slate-400 font-mono">
                   <span>Threads: 128 / 128</span>
                   <span>Core Temp: 49°C</span>
                 </div>
@@ -655,7 +655,7 @@ export default function App() {
                     style={{ width: `${ramUsage}%` }}
                   ></div>
                 </div>
-                <div className="mt-4 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 font-mono">
+                <div className="mt-4 flex items-center justify-between text-[11px] text-slate-505 dark:text-slate-400 font-mono">
                   <span>Active: 10.2 GB</span>
                   <span>Total: 16 GB DDR5</span>
                 </div>
@@ -683,7 +683,7 @@ export default function App() {
                     style={{ width: `${Math.min(100, (networkSpeed / 400) * 100)}%` }}
                   ></div>
                 </div>
-                <div className="mt-4 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 font-mono">
+                <div className="mt-4 flex items-center justify-between text-[11px] text-slate-505 dark:text-slate-400 font-mono">
                   <span>Rx: {Number((networkSpeed * 0.45).toFixed(1))} MB/s</span>
                   <span>Tx: {Number((networkSpeed * 0.55).toFixed(1))} MB/s</span>
                 </div>
@@ -713,7 +713,7 @@ export default function App() {
                           className={`px-3 py-1.5 rounded-lg text-xs font-semibold capitalize transition-all ${
                             chartPreset === preset 
                               ? 'bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 shadow-sm' 
-                              : 'text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-202'
+                              : 'text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-203'
                           }`}
                         >
                           {preset}
@@ -795,10 +795,10 @@ export default function App() {
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
-                      <CheckSquare className="h-4.5 w-4.5 text-indigo-505" />
+                      <CheckSquare className="h-4.5 w-4.5 text-indigo-555" />
                       <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100">Crucial Task Queues</h3>
                     </div>
-                    <span className="text-[11px] font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-505/10 px-2 py-0.5 rounded-full">
+                    <span className="text-[11px] font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-555/10 px-2 py-0.5 rounded-full">
                       {tasks.filter(t => t.status !== 'Done').length} Urgent
                     </span>
                   </div>
@@ -825,7 +825,7 @@ export default function App() {
                             task.status === 'Done' 
                               ? 'bg-emerald-500/10 text-emerald-400' 
                               : task.status === 'In Progress' 
-                                ? 'bg-indigo-505/10 text-indigo-400' 
+                                ? 'bg-indigo-555/10 text-indigo-400' 
                                 : 'bg-slate-400/10 text-slate-400'
                           }`}>
                             {task.status}
