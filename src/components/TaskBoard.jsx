@@ -18,14 +18,12 @@ export default function TaskBoard({
 }) {
   return (
     <div className="space-y-6">
-      {/* Title Section & Filters Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-5">
         <div>
           <h2 className="text-xl font-black text-slate-900 dark:text-slate-100">Operational Task Workspace</h2>
           <p className="text-xs text-slate-500 dark:text-slate-400">Add, drag, filter, and resolve action items live</p>
         </div>
 
-        {/* Filter controls */}
         <div className="flex flex-wrap items-center gap-2">
           {['All', 'To Do', 'In Progress', 'Done'].map(statusFilter => (
             <button
@@ -43,9 +41,7 @@ export default function TaskBoard({
         </div>
       </div>
 
-      {/* Add Task Interactive Form & Kanban Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        {/* Add Task Panel Column (Left) */}
         <div className="lg:col-span-4 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
           <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100 mb-4">Enqueue Action Item</h3>
           
@@ -57,7 +53,7 @@ export default function TaskBoard({
                 placeholder="Audit network firewall protocols..."
                 value={newTaskTitle}
                 onChange={(e) => setNewTaskTitle(e.target.value)}
-                className="w-full text-xs px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-955 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/30"
+                className="w-full text-xs px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-950 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/30"
               />
             </div>
 
@@ -100,7 +96,6 @@ export default function TaskBoard({
           </form>
         </div>
 
-        {/* Tasks List Board Column (Right) */}
         <div className="lg:col-span-8 space-y-3">
           {tasks
             .filter(task => taskFilter === 'All' || task.status === taskFilter)
@@ -111,7 +106,6 @@ export default function TaskBoard({
                 className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-indigo-500/40 transition-all shadow-sm"
               >
                 <div className="flex items-start gap-3.5">
-                  {/* Interactive Status Selector Checkbox */}
                   <button 
                     onClick={() => handleUpdateTaskStatus(task.id, task.status === 'Done' ? 'To Do' : 'Done')}
                     className={`p-1.5 rounded-lg border-2 transition-all shrink-0 mt-0.5 ${
@@ -138,7 +132,7 @@ export default function TaskBoard({
                     </div>
                     <p className={`text-sm font-semibold transition-all ${
                       task.status === 'Done' 
-                        ? 'line-through text-slate-400 dark:text-slate-505' 
+                        ? 'line-through text-slate-404 dark:text-slate-505' 
                         : 'text-slate-800 dark:text-slate-100'
                     }`}>
                       {task.title}
@@ -146,9 +140,7 @@ export default function TaskBoard({
                   </div>
                 </div>
 
-                {/* Actions Grid */}
                 <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
-                  {/* Status Switcher pill drop down */}
                   <select 
                     value={task.status}
                     onChange={(e) => handleUpdateTaskStatus(task.id, e.target.value)}
@@ -159,7 +151,6 @@ export default function TaskBoard({
                     <option value="Done">Done</option>
                   </select>
 
-                  {/* Archive button */}
                   <button 
                     onClick={() => handleDeleteTask(task.id, task.title)}
                     className="p-1.5 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-500 transition-colors"
@@ -172,7 +163,7 @@ export default function TaskBoard({
             ))}
           
           {tasks.length === 0 && (
-            <div className="p-8 text-center rounded-2xl border border-dashed border-slate-300 dark:border-slate-800 text-slate-500">
+            <div className="p-8 text-center rounded-2xl border border-dashed border-slate-300 dark:border-slate-800 text-slate-505">
               <CheckSquare className="h-12 w-12 mx-auto text-slate-400 mb-3 animate-bounce" />
               <p className="font-bold text-sm text-slate-800 dark:text-slate-200">No tasks listed in this node.</p>
               <p className="text-xs mt-1">Create high level sprints in the left controller form.</p>
