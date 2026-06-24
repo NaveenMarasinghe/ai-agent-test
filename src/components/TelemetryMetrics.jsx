@@ -67,7 +67,7 @@ export default function TelemetryMetrics({
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold capitalize transition-all ${
                     chartPreset === preset 
                       ? 'bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 shadow-sm' 
-                      : 'text-slate-505 dark:text-slate-404 hover:text-slate-800 dark:hover:text-slate-200'
+                      : 'text-slate-555 dark:text-slate-404 hover:text-slate-800 dark:hover:text-slate-200'
                   }`}
                 >
                   {preset}
@@ -133,7 +133,7 @@ export default function TelemetryMetrics({
               Total: {animatedChartData.reduce((a, b) => a + b, 0)} Units
             </div>
           </div>
-          <span className="text-[10px] text-slate-400 font-mono">Updated live via telemetry websocket</span>
+          <span className="text-[10px] text-slate-404 font-mono">Updated live via telemetry websocket</span>
         </div>
       </div>
 
